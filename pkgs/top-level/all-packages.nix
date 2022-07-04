@@ -30641,7 +30641,9 @@ with pkgs;
 
   toxiproxy = callPackage ../development/tools/toxiproxy { };
 
-  tqsl = callPackage ../applications/radio/tqsl { };
+  tqsl = callPackage ../applications/radio/tqsl {
+    openssl = openssl_1_1;
+  };
   trustedqsl = tqsl; # Alias added 2019-02-10
 
   transcode = callPackage ../applications/audio/transcode { };
