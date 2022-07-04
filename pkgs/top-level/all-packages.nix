@@ -35805,6 +35805,7 @@ with pkgs;
   simplehttp2server = callPackage ../servers/simplehttp2server { };
 
   simple-http-server = callPackage ../servers/simple-http-server {
+    openssl = openssl_1_1;
     inherit (darwin.apple_sdk.frameworks) Security;
   };
 
