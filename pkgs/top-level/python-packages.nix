@@ -8273,12 +8273,7 @@ in {
 
   pytesseract = callPackage ../development/python-modules/pytesseract { };
 
-  pytest = callPackage ../development/python-modules/pytest {
-    # hypothesis tests require pytest that causes dependency cycle
-    hypothesis = self.hypothesis.override {
-      doCheck = false;
-    };
-  };
+  pytest = callPackage ../development/python-modules/pytest { };
 
   pytest-aio = callPackage ../development/python-modules/pytest-aio { };
 
